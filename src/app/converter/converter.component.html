@@ -1,0 +1,26 @@
+<section class="body">
+  <div class="container">
+    <div class="box">
+      <div class="left_box">
+        <select name="currency" [(ngModel)]="selectedOptionOne" class="currency">
+          <option *ngFor="let currency of currencies" class="converter__exchange-option" [value]="currency">
+            {{currency}}
+          </option>
+        </select>
+        <input type="number" id="num" [(ngModel)]="currentInputOne" (ngModelChange)="changeInputOne()"
+          (ngModelChange)="changeOption()">
+
+      </div>
+      <div class="right_box">
+        <select name="currency" [(ngModel)]="selectedOptionTwo" class="currency">
+          <option *ngFor="let currency of currencies" class="converter__exchange-option" [value]="currency">
+            {{currency}}
+          </option>
+        </select>
+        <input type="number" id="ans" [(ngModel)]="currentInputTwo" (ngModelChange)="changeInputTwo()"
+          (ngModelChange)="changeOption()">
+      </div>
+    </div>
+  </div>
+</section>
+
